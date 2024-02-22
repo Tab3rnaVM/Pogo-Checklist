@@ -6,7 +6,10 @@ const UNOWN_VALUES = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!?";
 
 export default class PokemonService {
   getPageMode() {
-    return window.location.pathname.replace("/", "");
+    const basePath = "/Pogo-Checklist/";
+  const path = window.location.pathname;
+  const pageMode = path.substring(basePath.length);
+  return pageMode;
   }
 
   getMons(pageMode) {

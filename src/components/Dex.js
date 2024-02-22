@@ -87,6 +87,7 @@ const MonList = styled.div`
 `;
 
 export default function Dex() {
+  debugger;
   const pokemonService = new PokemonService();
   const settingsService = new SettingsService();
   const pageMode = pokemonService.getPageMode();
@@ -140,7 +141,7 @@ export default function Dex() {
     //   const name = mon.name === "?" ? "question" : mon.name.toLowerCase();
     //   return `/images/${basePath}/201-${name}.png`;
     // }
-    return `/images/${basePath}/pm${mon.id}.icon.png`;
+    return `${process.env.PUBLIC_URL}/images/${basePath}/pm${mon.id}.icon.png`;
   }
 
   const buildListItem = (mon) => {
@@ -151,8 +152,8 @@ export default function Dex() {
         onClick={() => toggleOwned(mon)}
       >
         <span>{mon.name}</span>
-        <img className="checkbox unchecked" src="/images/unchecked.png" alt="Unselect" />
-        <img className="checkbox checked" src="/images/checked.png" alt="Select" />
+        <img className="checkbox unchecked" src="/Pogo-Checklist/images/unchecked.png" alt="Unselect" />
+        <img className="checkbox checked" src="/Pogo-Checklist/images/checked.png" alt="Select" />
         <img
           className="sprite"
           alt=""
