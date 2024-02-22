@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/Pogo-Checklist/static/js/main.839b1b00.js",
+    "main.js": "/Pogo-Checklist/static/js/main.cb3ed7e5.js",
     "static/js/453.d70a7e00.chunk.js": "/Pogo-Checklist/static/js/453.d70a7e00.chunk.js",
     "index.html": "/Pogo-Checklist/index.html",
-    "main.839b1b00.js.map": "/Pogo-Checklist/static/js/main.839b1b00.js.map",
+    "main.cb3ed7e5.js.map": "/Pogo-Checklist/static/js/main.cb3ed7e5.js.map",
     "453.d70a7e00.chunk.js.map": "/Pogo-Checklist/static/js/453.d70a7e00.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.839b1b00.js"
+    "static/js/main.cb3ed7e5.js"
   ]
 }
