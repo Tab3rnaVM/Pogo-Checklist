@@ -8,11 +8,20 @@
   <script>
     // Redirige todas las solicitudes a la misma ruta que la URL actual
     const currentUrl = window.location.href;
-    const urlParams = new URLSearchParams(window.location.search);
-    const pathName = window.location.pathname;
-    const baseUrl = currentUrl.replace(pathName, '');
-    const newPath = urlParams.toString() ? pathName + '?' + urlParams.toString() : pathName;
-    window.location.replace(baseUrl + newPath);
+    const is404Page = currentUrl.endsWith('/404.html');
+    
+    if (!is404Page) {
+      // La página no es la página de error 404
+      const urlParams = new URLSearchParams(window.location.search);
+      const pathName = window.location.pathname;
+      const baseUrl = currentUrl.replace(pathName, '');
+      const newPath = urlParams.toString() ? pathName + '?' + urlParams.toString() : pathName;
+      
+      // Verifica si la URL ya está redirigiendo
+      if (!currentUrl.endsWith(baseUrl + newPath)) {
+        window.location.replace(baseUrl + newPath);
+      }
+    }
   </script>
 </head>
 <body>
