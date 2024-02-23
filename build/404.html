@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found</title>
   <script>
-    // Redirige todas las solicitudes a index.html
-    window.location.replace("/index.html");
+    // Redirige todas las solicitudes a la misma ruta que la URL actual
+    const currentUrl = window.location.href;
+    const pathName = window.location.pathname;
+    const baseUrl = currentUrl.replace(pathName, '');
+    window.location.replace(baseUrl + '/#' + pathName);
   </script>
 </head>
 <body>
