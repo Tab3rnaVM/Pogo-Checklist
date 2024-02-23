@@ -33,10 +33,10 @@ const HeaderContainer = styled.h1`
     cursor: pointer;
   }
   .home {
-    background-image: url(Pogo-Checklist/images/home.svg);
+    background-image: url(/Pogo-Checklist/images/home.svg);
   }
   .settings {
-    background-image: url(Pogo-Checklist/images/settings.svg);
+    background-image: url(/Pogo-Checklist/images/settings.svg);
   }
   .title {
     flex-grow: 2;
