@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <title>GOChecklists: Up-to-date checklists for Pokémon GO</title>
-  <meta name="description"
-    content="An up-to-date set of checklists for tracking Pokédex completion in Pokémon GO. Track shinies, Unown, shadow Pokémon, and more!" />
-
-  <link rel="manifest" href="./manifest.json" />
-  <link rel="icon" href="./images/icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#445BA1" />
-
-  <style>
-    @font-face {
-      font-family: "Varela";
-      src: url("./fonts/varela-regular.ttf");
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found</title>
+  <script>
+    // Redirige todas las solicitudes a la misma ruta que la URL actual
+    const currentUrl = window.location.href;
+    const urlParams = new URLSearchParams(window.location.search);
+    const pathName = window.location.pathname;
+    const baseUrl = currentUrl.replace(pathName, '');
+    const newPath = urlParams.toString() ? pathName + '?' + urlParams.toString() : pathName;
+    
+    // Verifica si la URL ya está redirigiendo
+    if (!currentUrl.endsWith(baseUrl + newPath)) {
+      window.location.replace(baseUrl + newPath);
     }
-
-    html,
-    body {
-      padding: 0;
-      margin: 0;
-      font-family: "Varela", "Segoe UI", "Helvetica Neue", Arial;
-    }
-  </style>
+  </script>
 </head>
-
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <!-- Si el navegador no redirige automáticamente, proporciona un mensaje de error -->
+  <h1>404 - Page Not Found</h1>
+  <p>La página que buscas no pudo ser encontrada.</p>
 </body>
-
 </html>
