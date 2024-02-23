@@ -8,9 +8,11 @@
   <script>
     // Redirige todas las solicitudes a la misma ruta que la URL actual
     const currentUrl = window.location.href;
+    const urlParams = new URLSearchParams(window.location.search);
     const pathName = window.location.pathname;
     const baseUrl = currentUrl.replace(pathName, '');
-    window.location.replace(baseUrl  + pathName);
+    const newPath = urlParams.toString() ? pathName + '?' + urlParams.toString() : pathName;
+    window.location.replace(baseUrl + newPath);
   </script>
 </head>
 <body>
