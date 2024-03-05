@@ -28,7 +28,17 @@ export default class PokemonService {
           return mon.shinyAvailable !== false;
         case DexModes.LUCKY:
           return mon.available !== false && mon.tradable !== false;
+        case DexModes.PERFECT:
+          return mon.available !== false;
         case DexModes.SHADOW:
+          return mon.shadow === true;
+        case DexModes.PURIFIED:
+          return mon.shadow === true;
+        //EVENT modificar mon.shadow por mon.event con los assets de eventos
+        case DexModes.EVENT:
+          return mon.shadow === true;
+        //EVENT modificar mon.shadow por mon.event con los assets de megas
+        case DexModes.MEGA:
           return mon.shadow === true;
         default:
           throw new Error();
